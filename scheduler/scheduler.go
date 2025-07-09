@@ -5,4 +5,3 @@ type Scheduler interface {
 	Score()
 	Pick()
 }
-

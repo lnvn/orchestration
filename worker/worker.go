@@ -24,10 +24,9 @@ func (w *Worker) RunTask() {
 }
 
 func (w *Worker) StartTask() {
-	fmt.Println("I will start or stop task")
+	fmt.Println("I will start task")
 }
 
 func (w *Worker) StopTask() {
-	fmt.Println("I will start or stop task")
+	fmt.Println("I will stop task")
 }
-

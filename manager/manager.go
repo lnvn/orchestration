@@ -2,6 +2,7 @@ package manager
 
 import (
 	"fmt"
+	"orchestration/task"
 
 	"github.com/golang-collections/collections/queue"
 	"github.com/google/uuid"
@@ -9,9 +10,9 @@ import (
 
 type Manager struct {
 	Pending queue.Queue
-	// TaskDb map[string][]Task
-	// EventDB map[string][]TaskEvent
-	Worker []string
+	TaskDb map[string][]task.Task
+	EventDB map[string][]task.TaskEvent
+	Worker        []string
 	WorkerTaskMap map[string][]uuid.UUID
 	TaskWorkerMap map[uuid.UUID]string
 }
