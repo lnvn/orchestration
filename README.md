@@ -5,6 +5,15 @@
 ├── go.mod
 ├── go.sum
 ├── main.go
-└── task
-    └── task.go
+├── manager
+│   └── manager.go
+├── node
+│   └── node.go
+├── README.md
+├── scheduler
+│   └── scheduler.go
+├── task
+│   └── task.go
+└── worker
+    └── worker.go
 ```
