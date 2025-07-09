@@ -10,10 +10,10 @@ import (
 type State int
 
 type TaskEvent struct {
-	ID uuid.UUID
-	State State
+	ID        uuid.UUID
+	State     State
 	TimeStamp time.Time
-	Task Task
+	Task      Task
 }
 
 const (
@@ -25,15 +25,15 @@ const (
 )
 
 type Task struct {
-	ID uuid.UUID
-	Name string
-	State State
-	Image string
-	Memory int
-	Disk int
-	ExposedPorts nat.PortSet
-	PortBindings map[string]string
+	ID            uuid.UUID
+	Name          string
+	State         State
+	Image         string
+	Memory        int
+	Disk          int
+	ExposedPorts  nat.PortSet
+	PortBindings  map[string]string
 	RestartPolicy string
-	StartTime time.Time
-	FinishTime time.Time
+	StartTime     time.Time
+	FinishTime    time.Time
 }
