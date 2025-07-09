@@ -45,9 +45,9 @@ func main() {
 
 	m := manager.Manager{
 		Pending: *queue.New(),
-		TaskDb: make(map[string][]task.Task),
+		TaskDb:  make(map[string][]task.Task),
 		EventDB: make(map[string][]task.TaskEvent),
-		Worker: []string{w.Name},
+		Worker:  []string{w.Name},
 	}
 
 	fmt.Printf("manager: %v\n", m)
@@ -56,12 +56,12 @@ func main() {
 	m.SendWork()
 
 	n := node.Node{
-		Name: "Node-1",
-		Ip: "192.168.1.1",
-		Cores: 4,
+		Name:   "Node-1",
+		Ip:     "192.168.1.1",
+		Cores:  4,
 		Memory: 1024,
-		Disk: 25,
-		Role: "worker",
+		Disk:   25,
+		Role:   "worker",
 	}
 
 	fmt.Printf("node: %v\n", n)
