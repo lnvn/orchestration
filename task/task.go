@@ -1,10 +1,8 @@
 package task
 
 import (
-	"context"
 	"time"
 
-	"github.com/docker/docker/client"
 	"github.com/docker/go-connections/nat"
 	"github.com/google/uuid"
 )
@@ -53,20 +51,28 @@ type Config struct {
 	RestartPolicy string
 }
 
-type Docker struct {
-	Client      *client.Client
-	Config      Config
-	ContainerId string
-}
+// type Docker struct {
+// 	Client      *client.Client
+// 	Config      Config
+// 	ContainerId string
+// }
 
-type DockerResult struct {
-	Error       error
-	Action      string
-	ContainerId string
-	Result      string
-}
+// type DockerResult struct {
+// 	Error       error
+// 	Action      string
+// 	ContainerId string
+// 	Result      string
+// }
 
 // func (d *Docker) Run() DockerResult {
 // 	ctx := context.Background()
-// 	reader, err := d.Client.ImagePull()
+// 	reader, err := d.Client.ImagePull(ctx, d.Config.Image, types.ImagePullOptions{})
+// 	if err != nil {
+// 		log.Printf("Error pulling image %s: %v\n", d.Config.Image, err)
+// 		return DockerResult{Error: err}
+// 	}
+// 	io.Copy(os.Stdout, reader)
 // }
+
+
+
